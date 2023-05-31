@@ -40,7 +40,7 @@ body {
 }
 
 .card-outer {
-  width: 300px;
+  width: 350px;
   background-color: var(--white);
   border-radius: 2.5%;
   display: flex;
@@ -60,6 +60,7 @@ body {
 .card-description h1 {
   line-height: 1.5rem;
 }
+
 h1 {
   padding-bottom: 10px;
   font-family: var(--header);
@@ -69,8 +70,7 @@ h1 {
 .product-image {
   max-width: 100%;
   border-radius: 2.5% 2.5% 0 0;
-  width: auto;
-  height: auto;
+  height: 240px;
 }
 
 .price-tag {
@@ -113,19 +113,22 @@ button:hover {
 @media (min-width: 600px) {
   .card-outer {
     min-width: 600px;
+    height: auto;
     display: flex;
     flex-direction: row;
-    height: auto;
   }
 
   .product-image {
     border-radius: 2.5% 0 0 2.5%;
     width: 50%;
-    height: auto;
+    height: 450px;
+    object-fit: cover; /*magic*/
   }
 
+.card-description > * {
+  padding: 15px 15px;
+}
   .card-description {
-    padding: 0 15px;
     line-height: 1.5rem;
     background-color: var(--white);
     border-radius: 0 2.5% 2.5% 0;
